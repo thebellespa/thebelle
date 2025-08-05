@@ -480,12 +480,12 @@ body {
     }
     
     .product-grid {
-        grid-template-columns: repeat(2, 1fr); /* 2열로 변경합니다 */
-        gap: 15px; /* 간격을 늘립니다 */
+        grid-template-columns: 1fr; /* 1열로 변경합니다 */
+        gap: 20px; /* 간격을 늘립니다 */
     }
     
     .product-image {
-        height: 200px; /* 이미지 높이를 조정합니다 */
+        height: 250px; /* 이미지 높이를 조정합니다 */
     }
     
     .product-info {
@@ -776,13 +776,13 @@ body {
     }
     
     .product-item {
-        flex-direction: row; /* 가로로 배치합니다 */
+        flex-direction: column; /* 세로로 배치합니다 */
         height: auto; /* 높이를 자동으로 설정합니다 */
     }
     
     .product-image {
-        width: 120px; /* 이미지 너비를 고정합니다 */
-        height: 120px; /* 이미지 높이를 고정합니다 */
+        width: 100%; /* 이미지 너비를 100%로 설정합니다 */
+        height: 200px; /* 이미지 높이를 200px로 설정합니다 */
         flex-shrink: 0; /* 크기가 줄어들지 않게 합니다 */
     }
     
