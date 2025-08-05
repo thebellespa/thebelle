@@ -1,0 +1,1512 @@
+/* 초기화 및 기본 설정 */
+* {
+    margin: 0; /* 모든 요소의 기본 마진을 0으로 설정합니다 */
+    padding: 0; /* 모든 요소의 기본 패딩을 0으로 설정합니다 */
+    box-sizing: border-box; /* 테두리와 패딩을 포함한 크기 계산을 합니다 */
+}
+
+/* 부드러운 스크롤 효과 설정 */
+html {
+    scroll-behavior: smooth; /* 앵커 링크 클릭 시 부드럽게 스크롤됩니다 */
+}
+
+/* 전체 페이지 기본 설정 */
+body {
+    font-family: 'Noto Sans KR', sans-serif; /* 넥슨 대신 구글 웹폰트 사용 */
+    line-height: 1.6; /* 줄간격을 1.6배로 설정합니다 */
+    color: #333; /* 글자색을 진한 회색으로 설정합니다 */
+}
+
+/* 헤더 전체 스타일 */
+.header {
+    background-color: white; /* 배경색을 흰색으로 설정합니다 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 헤더 아래쪽에 그림자를 만듭니다 */
+    position: sticky; /* 스크롤해도 헤더가 상단에 고정됩니다 */
+    top: 0; /* 화면 맨 위에 고정합니다 */
+    z-index: 1000; /* 다른 요소들 위에 표시됩니다 */
+    width: 100%; /* 가로 전체 너비를 차지합니다 */
+}
+
+/* 헤더 내용을 담는 컨테이너 */
+.header-container {
+    max-width: 1200px; /* 최대 너비를 1200px로 제한합니다 */
+    margin: 0 auto; /* 가운데 정렬을 위해 좌우 마진을 자동으로 설정합니다 */
+    padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+    display: flex; /* 플렉스 박스를 사용해서 가로로 배치합니다 */
+    justify-content: space-between; /* 양쪽 끝과 가운데로 배치합니다 */
+    align-items: center; /* 세로 가운데로 정렬합니다 */
+    gap: 10px; /* 요소들 사이 간격을 10px로 설정합니다 */
+    height: 80px; /* 헤더 높이를 80px로 설정합니다 */
+}
+
+/* 로고 영역 스타일 */
+.logo {
+    flex-shrink: 0; /* 로고는 크기가 줄어들지 않도록 합니다 */
+}
+
+/* 로고 이미지 스타일 */
+.logo-img {
+    height: 50px; /* 로고 높이를 50px로 설정합니다 */
+    width: auto; /* 너비는 비율에 맞게 자동으로 조정합니다 */
+    object-fit: contain; /* 이미지 비율을 유지하면서 크기를 맞춥니다 */
+}
+
+/* 네비게이션 메뉴 영역 스타일 */
+.nav-menu {
+    display: flex; /* 메뉴 항목들을 가로로 배치합니다 */
+    gap: 30px; /* 메뉴 항목들 사이 간격을 30px로 설정합니다 */
+    align-items: center; /* 세로 가운데 정렬합니다 */
+}
+
+/* 네비게이션 메뉴 항목 스타일 */
+.nav-item {
+    text-decoration: none; /* 밑줄을 제거합니다 */
+    color: #333; /* 글자색을 진한 회색으로 설정합니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+    font-size: 16px; /* 글자 크기를 16px로 설정합니다 */
+    transition: color 0.3s ease; /* 색상 변화에 0.3초 애니메이션을 적용합니다 */
+    white-space: nowrap; /* 텍스트가 줄바뀜되지 않도록 합니다 */
+}
+
+/* 네비게이션 메뉴 항목 호버 효과 */
+.nav-item:hover {
+    color: #007bff; /* 마우스를 올리면 글자색이 파란색으로 변합니다 */
+}
+
+/* 로그인 영역 스타일 */
+.login-area {
+    flex-shrink: 0; /* 로그인 버튼 영역이 줄어들지 않도록 합니다 */
+}
+
+/* 로그인 버튼 스타일 */
+.login-btn {
+    background-color: white; /* 배경색을 흰색으로 설정합니다 */
+    color: #333; /* 글자색을 진한 회색으로 설정합니다 */
+    border: 2px solid #333; /* 검은색 테두리를 2px로 설정합니다 */
+    border-radius: 25px; /* 모서리를 25px만큼 둥글게 만듭니다 */
+    padding: 10px 20px; /* 상하 10px, 좌우 20px 패딩을 줍니다 */
+    font-size: 14px; /* 글자 크기를 14px로 설정합니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+    cursor: pointer; /* 마우스를 올리면 손가락 모양으로 변합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+}
+
+/* 로그인 버튼 호버 효과 */
+.login-btn:hover {
+    background-color: #333; /* 마우스를 올리면 배경이 검은색으로 변합니다 */
+    color: white; /* 마우스를 올리면 글자색이 흰색으로 변합니다 */
+}
+
+/* 모바일 메뉴 버튼 (기본적으로 숨김) */
+.mobile-menu-btn {
+    display: none; /* 기본적으로 숨겨둡니다 */
+    flex-direction: column; /* 세로로 배치합니다 */
+    cursor: pointer; /* 클릭할 수 있다는 것을 표시합니다 */
+    padding: 5px; /* 패딩을 5px 줍니다 */
+}
+
+/* 모바일 메뉴 버튼의 선 스타일 */
+.mobile-menu-btn span {
+    width: 25px; /* 선의 너비를 25px로 설정합니다 */
+    height: 3px; /* 선의 높이를 3px로 설정합니다 */
+    background-color: #333; /* 선의 색을 검은색으로 설정합니다 */
+    margin: 3px 0; /* 선들 사이 간격을 3px로 설정합니다 */
+    transition: 0.3s; /* 변화에 애니메이션을 적용합니다 */
+    display: block; /* 블록 요소로 표시합니다 */
+    transform-origin: center; /* 변형의 기준점을 중앙으로 설정합니다 */
+}
+
+/* 모바일 메뉴가 열렸을 때 햄버거 버튼을 X 모양으로 변경 */
+.mobile-menu-btn.active span:nth-child(1) {
+    transform: rotate(45deg) translate(6px, 6px); /* 첫 번째 선을 45도 회전시킵니다 */
+}
+
+.mobile-menu-btn.active span:nth-child(2) {
+    opacity: 0; /* 두 번째 선을 투명하게 만듭니다 */
+}
+
+.mobile-menu-btn.active span:nth-child(3) {
+    transform: rotate(-45deg) translate(6px, -6px); /* 세 번째 선을 -45도 회전시킵니다 */
+}
+
+/* 모바일 메뉴 (기본적으로 숨김) */
+.mobile-menu {
+    display: none; /* 기본적으로 숨겨둡니다 */
+    position: absolute; /* 절대 위치로 설정합니다 */
+    top: 100%; /* 헤더 바로 아래에 위치시킵니다 */
+    left: 0; /* 왼쪽에 정렬합니다 */
+    width: 100%; /* 전체 너비를 차지합니다 */
+    background-color: white; /* 배경색을 흰색으로 설정합니다 */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* 그림자를 추가합니다 */
+    flex-direction: column; /* 세로로 배치합니다 */
+    padding: 20px; /* 패딩을 20px 줍니다 */
+}
+
+/* 모바일 메뉴가 열렸을 때 */
+.mobile-menu.active {
+    display: flex; /* 플렉스로 표시합니다 */
+}
+
+/* 모바일 메뉴 항목 스타일 */
+.mobile-nav-item {
+    text-decoration: none; /* 밑줄을 제거합니다 */
+    color: #333; /* 글자색을 검은색으로 설정합니다 */
+    padding: 15px 0; /* 상하 패딩을 15px씩 줍니다 */
+    border-bottom: 1px solid #eee; /* 아래쪽에 연한 회색 선을 그어줍니다 */
+    font-size: 16px; /* 글자 크기를 16px로 설정합니다 */
+}
+
+/* 모바일 로그인 버튼 */
+.mobile-login-btn {
+    background-color: white; /* 배경색을 흰색으로 설정합니다 */
+    color: #333; /* 글자색을 검은색으로 설정합니다 */
+    border: 2px solid #333; /* 검은색 테두리를 설정합니다 */
+    border-radius: 25px; /* 모서리를 둥글게 만듭니다 */
+    padding: 12px 0; /* 상하 패딩을 12px씩 줍니다 */
+    margin-top: 20px; /* 위쪽 마진을 20px 줍니다 */
+    font-size: 16px; /* 글자 크기를 16px로 설정합니다 */
+    cursor: pointer; /* 클릭할 수 있다는 것을 표시합니다 */
+}
+
+/* 히어로 섹션 전체 스타일 */
+.hero-section {
+    position: relative; /* 절대 위치 요소들의 기준점이 됩니다 */
+    width: 100%; /* 전체 너비를 차지합니다 */
+    height: 100vh; /* 화면 전체 높이를 차지합니다 */
+    overflow: hidden; /* 넘치는 부분을 숨깁니다 */
+}
+
+/* 캐러셀 컨테이너 스타일 */
+.carousel-container {
+    position: relative; /* 슬라이드들의 기준점이 됩니다 */
+    width: 100%; /* 전체 너비를 차지합니다 */
+    height: 100%; /* 전체 높이를 차지합니다 */
+}
+
+/* 개별 슬라이드 스타일 */
+.slide {
+    position: absolute; /* 절대 위치로 설정해서 겹치게 배치합니다 */
+    top: 0; /* 위쪽에 고정합니다 */
+    left: 0; /* 왼쪽에 고정합니다 */
+    width: 100%; /* 전체 너비를 차지합니다 */
+    height: 100%; /* 전체 높이를 차지합니다 */
+    background-size: cover; /* 배경 이미지가 전체를 덮도록 합니다 */
+    background-position: center; /* 배경 이미지를 가운데 정렬합니다 */
+    background-repeat: no-repeat; /* 배경 이미지가 반복되지 않게 합니다 */
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    align-items: center; /* 세로 가운데 정렬합니다 */
+    justify-content: center; /* 가로 가운데 정렬합니다 */
+    opacity: 0; /* 기본적으로 투명하게 숨깁니다 */
+    transition: opacity 1s ease-in-out; /* 1초에 걸쳐 부드럽게 나타나고 사라집니다 */
+}
+
+/* 활성화된 슬라이드 (현재 보이는 슬라이드) */
+.slide.active {
+    opacity: 1; /* 완전히 불투명하게 만들어서 보이게 합니다 */
+}
+
+/* 슬라이드 내용 컨테이너 */
+.slide-content {
+    text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    color: white; /* 글자색을 흰색으로 설정합니다 */
+    max-width: 800px; /* 최대 너비를 800px로 제한합니다 */
+    padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+}
+
+/* 브랜드 로고 영역 */
+.brand-logo {
+    margin-bottom: 30px; /* 아래쪽 마진을 30px 줍니다 */
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    justify-content: center; /* 가로 가운데 정렬합니다 */
+    align-items: center; /* 세로 가운데 정렬합니다 */
+}
+
+/* 히어로 로고 이미지 */
+.hero-logo-img {
+    max-width: 600px; /* 최대 너비를 600px로 확대합니다 */
+    width: 90%; /* 부모 요소의 90% 너비를 차지합니다 */
+    height: auto; /* 비율을 유지하면서 높이를 자동으로 조정합니다 */
+    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.8)); /* 이미지에 더 진한 그림자를 넣어서 잘 보이게 합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+    object-fit: contain; /* 이미지 비율을 유지하면서 컨테이너에 맞춥니다 */
+}
+
+/* 로고 이미지 호버 효과 */
+.hero-logo-img:hover {
+    transform: scale(1.05); /* 마우스를 올리면 5% 크기가 커집니다 */
+    filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.9)); /* 호버 시 그림자를 더 진하게 만듭니다 */
+}
+
+/* 로고 이미지 페이드인 애니메이션 */
+@keyframes logoFadeIn {
+    from {
+        opacity: 0; /* 투명한 상태에서 시작합니다 */
+        transform: translateY(20px); /* 20px 아래에서 시작합니다 */
+    }
+    to {
+        opacity: 1; /* 완전히 불투명하게 됩니다 */
+        transform: translateY(0); /* 원래 위치로 이동합니다 */
+    }
+}
+
+/* 활성 슬라이드의 로고에 애니메이션 적용 */
+.slide.active .hero-logo-img {
+    animation: logoFadeIn 1.2s ease-out; /* 1.2초에 걸쳐 페이드인 애니메이션을 실행합니다 */
+}
+
+/* 슬라이드 설명 텍스트 */
+.slide-description {
+    font-size: 1.3rem; /* 글자 크기를 1.3rem으로 설정합니다 */
+    font-weight: 400; /* 글자 두께를 중간으로 설정합니다 */
+    line-height: 1.6; /* 줄간격을 1.6배로 설정합니다 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 글자에 그림자를 넣어서 잘 보이게 합니다 */
+    margin: 0; /* 마진을 제거합니다 */
+    max-width: 600px; /* 최대 너비를 600px로 제한합니다 */
+    margin: 0 auto; /* 가운데 정렬합니다 */
+    opacity: 0.95; /* 약간 투명하게 만들어서 우아함을 더합니다 */
+}
+
+/* 슬라이드 설명 텍스트 페이드인 애니메이션 */
+@keyframes textFadeIn {
+    from {
+        opacity: 0; /* 투명한 상태에서 시작합니다 */
+        transform: translateY(30px); /* 30px 아래에서 시작합니다 */
+    }
+    to {
+        opacity: 0.95; /* 약간 투명한 상태로 완성됩니다 */
+        transform: translateY(0); /* 원래 위치로 이동합니다 */
+    }
+}
+
+/* 활성 슬라이드의 텍스트에 애니메이션 적용 */
+.slide.active .slide-description {
+    animation: textFadeIn 1.5s ease-out 0.3s both; /* 0.3초 딜레이 후 1.5초에 걸쳐 페이드인 애니메이션을 실행합니다 */
+}
+
+/* 캐러셀 화살표 버튼 공통 스타일 */
+.carousel-btn {
+    position: absolute; /* 절대 위치로 설정합니다 */
+    top: 50%; /* 위에서 50% 지점에 배치합니다 */
+    transform: translateY(-50%); /* 세로 가운데 정렬을 위해 위로 50% 이동합니다 */
+    background: rgba(255,255,255,0.2); /* 반투명한 흰색 배경을 설정합니다 */
+    color: white; /* 글자색을 흰색으로 설정합니다 */
+    border: 2px solid rgba(255,255,255,0.3); /* 반투명한 흰색 테두리를 설정합니다 */
+    border-radius: 50%; /* 완전한 원형으로 만듭니다 */
+    width: 60px; /* 너비를 60px로 설정합니다 */
+    height: 60px; /* 높이를 60px로 설정합니다 */
+    font-size: 24px; /* 글자 크기를 24px로 설정합니다 */
+    cursor: pointer; /* 클릭할 수 있다는 것을 표시합니다 */
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    align-items: center; /* 세로 가운데 정렬합니다 */
+    justify-content: center; /* 가로 가운데 정렬합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+    z-index: 10; /* 다른 요소들 위에 표시합니다 */
+}
+
+/* 화살표 버튼 호버 효과 */
+.carousel-btn:hover {
+    background: rgba(255,255,255,0.4); /* 마우스를 올리면 배경을 더 진하게 만듭니다 */
+    border-color: rgba(255,255,255,0.6); /* 마우스를 올리면 테두리를 더 진하게 만듭니다 */
+    transform: translateY(-50%) scale(1.1); /* 크기를 10% 키웁니다 */
+}
+
+/* 이전 버튼 (왼쪽 화살표) */
+.prev-btn {
+    left: 30px; /* 왼쪽에서 30px 떨어진 곳에 배치합니다 */
+}
+
+/* 다음 버튼 (오른쪽 화살표) */
+.next-btn {
+    right: 30px; /* 오른쪽에서 30px 떨어진 곳에 배치합니다 */
+}
+
+/* 슬라이드 인디케이터 컨테이너 */
+.slide-indicators {
+    position: absolute; /* 절대 위치로 설정합니다 */
+    bottom: 30px; /* 아래쪽에서 30px 떨어진 곳에 배치합니다 */
+    left: 50%; /* 왼쪽에서 50% 지점에 배치합니다 */
+    transform: translateX(-50%); /* 가로 가운데 정렬을 위해 왼쪽으로 50% 이동합니다 */
+    display: flex; /* 플렉스 박스를 사용해서 가로로 배치합니다 */
+    gap: 15px; /* 인디케이터들 사이 간격을 15px로 설정합니다 */
+    z-index: 10; /* 다른 요소들 위에 표시합니다 */
+}
+
+/* 개별 인디케이터 (점) */
+.indicator {
+    width: 12px; /* 너비를 12px로 설정합니다 */
+    height: 12px; /* 높이를 12px로 설정합니다 */
+    border-radius: 50%; /* 완전한 원형으로 만듭니다 */
+    background: rgba(255,255,255,0.5); /* 반투명한 흰색 배경을 설정합니다 */
+    cursor: pointer; /* 클릭할 수 있다는 것을 표시합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+}
+
+/* 활성화된 인디케이터 (현재 슬라이드) */
+.indicator.active {
+    background: white; /* 완전한 흰색으로 만듭니다 */
+    transform: scale(1.2); /* 크기를 20% 키웁니다 */
+}
+
+/* 인디케이터 호버 효과 */
+.indicator:hover {
+    background: rgba(255,255,255,0.8); /* 마우스를 올리면 더 진한 흰색으로 만듭니다 */
+}
+
+/* 메인 콘텐츠 영역 스타일 */
+.main-content {
+    padding: 100px 20px; /* 상하 100px, 좌우 20px 패딩을 줍니다 */
+    text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    max-width: 1200px; /* 최대 너비를 1200px로 제한합니다 */
+    margin: 0 auto; /* 가운데 정렬합니다 */
+}
+
+/* 태블릿 크기 화면 (768px 이하) */
+@media (max-width: 768px) {
+    /* 네비게이션 메뉴를 숨깁니다 */
+    .nav-menu {
+        display: none;
+    }
+    
+    /* 로그인 버튼을 숨깁니다 */
+    .login-area {
+        display: none;
+    }
+    
+    /* 모바일 메뉴 버튼을 보여줍니다 */
+    .mobile-menu-btn {
+        display: flex;
+    }
+    
+    /* 헤더 컨테이너의 간격을 조정합니다 */
+    .header-container {
+        gap: 15px;
+        padding: 0 15px;
+    }
+    
+    /* 로고 크기를 조정합니다 */
+    .logo-img {
+        height: 40px;
+    }
+    
+    /* 히어로 섹션 모바일 스타일 */
+    .hero-section {
+        height: 70vh; /* 모바일에서는 높이를 줄입니다 */
+    }
+    
+    /* 브랜드 로고 모바일 크기 조정 */
+    .hero-logo-img {
+        max-width: 400px; /* 태블릿에서는 로고 크기를 적당히 조정합니다 */
+        width: 85%; /* 태블릿에서는 85% 너비를 차지합니다 */
+    }
+    
+    /* 프로덕트 섹션 태블릿 스타일 */
+    .product-section {
+        padding: 60px 0; /* 상하 패딩을 조정합니다 */
+    }
+    
+    .shop-img {
+        height: 300px; /* 매장 이미지 높이를 조정합니다 */
+    }
+    
+
+    
+    /* 브랜드 스토리 섹션 태블릿 스타일 */
+    .brand-story-section {
+        padding: 60px 0; /* 상하 패딩을 줄입니다 */
+    }
+    
+    .brand-story-content {
+        flex-direction: column; /* 세로로 배치합니다 */
+        gap: 40px; /* 간격을 줄입니다 */
+        margin-bottom: 60px; /* 아래쪽 마진을 줄입니다 */
+        text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    }
+    
+    .brand-story-image {
+        max-width: 400px; /* 최대 너비를 줄입니다 */
+        margin: 0 auto; /* 가운데 정렬합니다 */
+    }
+    
+    .brand-img {
+        height: 300px; /* 높이를 줄입니다 */
+    }
+    
+    .brand-story-title {
+        font-size: 2.3rem; /* 타이틀 크기를 줄입니다 */
+    }
+    
+    .brand-story-subtitle {
+        font-size: 1rem; /* 서브타이틀 크기를 줄입니다 */
+        margin-bottom: 30px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .story-preview p, .story-full p {
+        font-size: 1rem; /* 글자 크기를 줄입니다 */
+        margin-bottom: 12px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .reservation-notice-brand {
+        padding: 25px; /* 패딩을 줄입니다 */
+    }
+    
+    .notice-title-brand-kr {
+        font-size: 1.2rem; /* 한국어 타이틀 크기를 줄입니다 */
+    }
+    
+    .notice-title-brand-en {
+        font-size: 1.1rem; /* 영어 타이틀 크기를 줄입니다 */
+    }
+    
+    .notice-text-brand p {
+        font-size: 0.9rem; /* 본문 글자 크기를 줄입니다 */
+    }
+    
+    .contact-info-brand p {
+        font-size: 1rem; /* 연락처 글자 크기를 줄입니다 */
+    }
+    
+    .notice-footer-brand {
+        font-size: 0.85rem; /* 마무리 텍스트 크기를 줄입니다 */
+    }
+    
+    /* 이용안내 섹션 태블릿 스타일 */
+    .guide-section {
+        padding: 60px 0; /* 상하 패딩을 줄입니다 */
+    }
+    
+    .guide-title {
+        font-size: 2.8rem; /* 타이틀 크기를 줄입니다 */
+        margin-bottom: 8px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .guide-subtitle {
+        font-size: 1.1rem; /* 서브타이틀 크기를 줄입니다 */
+        margin-bottom: 60px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .guide-grid {
+        grid-template-columns: repeat(2, 1fr); /* 가로 2개씩 배치합니다 */
+        gap: 20px; /* 간격을 줄입니다 */
+    }
+    
+    .guide-item {
+        padding: 25px; /* 패딩을 줄입니다 */
+    }
+    
+
+    
+    .guide-item-title {
+        font-size: 1.3rem; /* 타이틀 크기를 줄입니다 */
+        margin-bottom: 15px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .guide-content p {
+        font-size: 0.9rem; /* 글자 크기를 줄입니다 */
+        margin-bottom: 10px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .product-title {
+        font-size: 2.5rem; /* 타이틀 크기를 조정합니다 */
+        margin-bottom: 60px; /* 아래쪽 마진을 조정합니다 */
+    }
+    
+    .product-grid {
+        grid-template-columns: repeat(2, 1fr); /* 2열로 변경합니다 */
+        gap: 15px; /* 간격을 늘립니다 */
+    }
+    
+    .product-image {
+        height: 200px; /* 이미지 높이를 조정합니다 */
+    }
+    
+    .product-info {
+        padding: 18px; /* 패딩을 조정합니다 */
+    }
+    
+    .product-name {
+        font-size: 1rem; /* 글자 크기를 조정합니다 */
+    }
+    
+    .product-time {
+        font-size: 0.85rem; /* 글자 크기를 조정합니다 */
+    }
+    
+    .price-weekday, .price-weekend {
+        font-size: 0.8rem; /* 가격 글자 크기를 조정합니다 */
+    }
+    
+    .description-preview p, .description-full p {
+        font-size: 0.75rem; /* 설명 글자 크기를 조정합니다 */
+    }
+    
+    /* 슬라이드 설명 텍스트 모바일 크기 조정 */
+    .slide-description {
+        font-size: 1.1rem; /* 글자 크기를 작게 조정합니다 */
+        padding: 0 10px; /* 좌우 패딩을 줄입니다 */
+    }
+    
+    /* 화살표 버튼 모바일 크기 조정 */
+    .carousel-btn {
+        width: 50px; /* 버튼 크기를 작게 만듭니다 */
+        height: 50px; /* 버튼 크기를 작게 만듭니다 */
+        font-size: 20px; /* 글자 크기를 작게 만듭니다 */
+    }
+    
+    .prev-btn {
+        left: 15px; /* 왼쪽 여백을 줄입니다 */
+    }
+    
+    .next-btn {
+        right: 15px; /* 오른쪽 여백을 줄입니다 */
+    }
+    
+    /* 인디케이터 위치 조정 */
+    .slide-indicators {
+        bottom: 20px; /* 아래쪽 여백을 줄입니다 */
+    }
+    
+    .indicator {
+        width: 10px; /* 인디케이터 크기를 작게 만듭니다 */
+        height: 10px; /* 인디케이터 크기를 작게 만듭니다 */
+    }
+    
+    /* 태블릿용 푸터 스타일 */
+    .footer {
+        padding: 50px 0 25px; /* 패딩을 줄입니다 */
+        margin-top: 60px; /* 위쪽 마진을 줄입니다 */
+    }
+    
+    .footer-content {
+        grid-template-columns: repeat(2, 1fr); /* 2개 컬럼으로 변경합니다 */
+        gap: 30px; /* 간격을 줄입니다 */
+    }
+    
+    .footer-links {
+        margin-bottom: 40px; /* 마진을 줄입니다 */
+    }
+}
+
+/* 작은 모바일 화면 (480px 이하) */
+@media (max-width: 480px) {
+    /* 헤더 높이를 줄입니다 */
+    .header-container {
+        height: 70px;
+        padding: 0 10px;
+    }
+    
+    /* 로고를 더 작게 만듭니다 */
+    .logo-img {
+        height: 35px;
+    }
+    
+    /* 모바일 메뉴 버튼 크기를 조정합니다 */
+    .mobile-menu-btn span {
+        width: 20px;
+    }
+    
+    /* 히어로 섹션 작은 모바일 스타일 */
+    .hero-section {
+        height: 60vh; /* 작은 모바일에서는 높이를 더 줄입니다 */
+    }
+    
+    /* 브랜드 로고 작은 모바일 크기 조정 */
+    .hero-logo-img {
+        max-width: 320px; /* 작은 모바일에서는 로고 크기를 조정합니다 */
+        width: 80%; /* 작은 모바일에서는 80% 너비를 차지합니다 */
+    }
+    
+    /* 브랜드 로고 영역 마진 조정 */
+    .brand-logo {
+        margin-bottom: 20px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    /* 프로덕트 섹션 작은 모바일 스타일 */
+    .product-section {
+        padding: 40px 0; /* 상하 패딩을 줄입니다 */
+    }
+    
+    .product-container {
+        padding: 0 10px; /* 좌우 패딩을 줄입니다 */
+    }
+    
+    .shop-img {
+        height: 200px; /* 매장 이미지 높이를 줄입니다 */
+    }
+    
+
+    
+    /* 브랜드 스토리 섹션 작은 모바일 스타일 */
+    .brand-story-section {
+        padding: 40px 0; /* 상하 패딩을 더 줄입니다 */
+    }
+    
+    .brand-story-container {
+        padding: 0 15px; /* 좌우 패딩을 줄입니다 */
+    }
+    
+    .brand-story-content {
+        gap: 30px; /* 간격을 더 줄입니다 */
+        margin-bottom: 40px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .brand-story-image {
+        max-width: 100%; /* 최대 너비를 전체로 설정합니다 */
+    }
+    
+    .brand-img {
+        height: 250px; /* 높이를 더 줄입니다 */
+        border-radius: 15px; /* 모서리를 줄입니다 */
+    }
+    
+    .brand-story-title {
+        font-size: 1.8rem; /* 타이틀 크기를 더 줄입니다 */
+        margin-bottom: 8px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .brand-story-subtitle {
+        font-size: 0.9rem; /* 서브타이틀 크기를 더 줄입니다 */
+        margin-bottom: 25px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .story-preview, .story-full {
+        line-height: 1.6; /* 줄간격을 줄입니다 */
+        margin-bottom: 20px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .story-preview p, .story-full p {
+        font-size: 0.9rem; /* 글자 크기를 더 줄입니다 */
+        margin-bottom: 10px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .story-toggle-btn {
+        padding: 10px 20px; /* 패딩을 줄입니다 */
+        font-size: 0.9rem; /* 글자 크기를 줄입니다 */
+        border-radius: 20px; /* 모서리를 줄입니다 */
+    }
+    
+    .reservation-notice-brand {
+        padding: 20px; /* 패딩을 더 줄입니다 */
+        border-radius: 15px; /* 모서리를 줄입니다 */
+    }
+    
+    .notice-section-kr, .notice-section-en {
+        margin-bottom: 20px; /* 섹션 간격을 줄입니다 */
+    }
+    
+    .notice-title-brand-kr {
+        font-size: 1.1rem; /* 한국어 타이틀 크기를 더 줄입니다 */
+        margin-bottom: 12px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .notice-title-brand-en {
+        font-size: 1rem; /* 영어 타이틀 크기를 더 줄입니다 */
+        margin-bottom: 10px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .notice-text-brand p {
+        font-size: 0.8rem; /* 본문 글자 크기를 더 줄입니다 */
+        line-height: 1.5; /* 줄간격을 줄입니다 */
+        margin-bottom: 6px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .contact-info-brand {
+        padding: 12px; /* 패딩을 줄입니다 */
+        margin: 12px 0; /* 상하 마진을 줄입니다 */
+    }
+    
+    .contact-info-brand p {
+        font-size: 0.9rem; /* 연락처 글자 크기를 더 줄입니다 */
+        margin-bottom: 6px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .contact-icon-brand {
+        font-size: 1rem; /* 아이콘 크기를 줄입니다 */
+        margin-right: 6px; /* 오른쪽 마진을 줄입니다 */
+    }
+    
+    .notice-footer-brand {
+        font-size: 0.8rem; /* 마무리 텍스트 크기를 더 줄입니다 */
+        margin-top: 10px; /* 위쪽 마진을 줄입니다 */
+        margin-bottom: 3px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .divider-brand {
+        width: 50%; /* 구분선 너비를 줄입니다 */
+        margin: 20px auto; /* 상하 마진을 줄입니다 */
+    }
+    
+    /* 이용안내 섹션 작은 모바일 스타일 */
+    .guide-section {
+        padding: 40px 0; /* 상하 패딩을 더 줄입니다 */
+    }
+    
+    .guide-container {
+        padding: 0 15px; /* 좌우 패딩을 줄입니다 */
+    }
+    
+    .guide-title {
+        font-size: 2.2rem; /* 타이틀 크기를 더 줄입니다 */
+        margin-bottom: 5px; /* 아래쪽 마진을 줄입니다 */
+        letter-spacing: 0.05em; /* 글자 간격을 줄입니다 */
+    }
+    
+    .guide-subtitle {
+        font-size: 1rem; /* 서브타이틀 크기를 더 줄입니다 */
+        margin-bottom: 40px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .guide-grid {
+        grid-template-columns: 1fr; /* 1열로 변경합니다 */
+        gap: 20px; /* 간격을 더 줄입니다 */
+    }
+    
+    .guide-item {
+        padding: 20px; /* 패딩을 더 줄입니다 */
+        border-radius: 15px; /* 모서리를 조금 줄입니다 */
+    }
+    
+
+    
+    .guide-item-title {
+        font-size: 1.2rem; /* 타이틀 크기를 더 줄입니다 */
+        margin-bottom: 12px; /* 아래쪽 마진을 줄입니다 */
+        padding-bottom: 8px; /* 아래쪽 패딩을 줄입니다 */
+    }
+    
+    .guide-content {
+        line-height: 1.6; /* 줄간격을 줄입니다 */
+    }
+    
+    .guide-content p {
+        font-size: 0.85rem; /* 글자 크기를 더 줄입니다 */
+        margin-bottom: 8px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .guide-content .warning {
+        padding: 8px 12px; /* 패딩을 줄입니다 */
+        font-size: 0.8rem; /* 글자 크기를 줄입니다 */
+        margin-top: 12px; /* 위쪽 마진을 줄입니다 */
+        border-radius: 8px; /* 모서리를 줄입니다 */
+    }
+    
+    /* 호버 효과를 모바일에서는 약하게 조정 */
+    .guide-item:hover {
+        transform: translateY(-5px) scale(1.01); /* 변형을 약하게 조정합니다 */
+    }
+    
+
+    
+    .product-title {
+        font-size: 1.8rem; /* 타이틀 크기를 줄입니다 */
+        margin-bottom: 40px; /* 아래쪽 마진을 줄입니다 */
+    }
+    
+    .product-grid {
+        grid-template-columns: 1fr; /* 1열로 변경합니다 */
+        gap: 15px; /* 간격을 늘립니다 */
+    }
+    
+    .product-item {
+        flex-direction: row; /* 가로로 배치합니다 */
+        height: auto; /* 높이를 자동으로 설정합니다 */
+    }
+    
+    .product-image {
+        width: 120px; /* 이미지 너비를 고정합니다 */
+        height: 120px; /* 이미지 높이를 고정합니다 */
+        flex-shrink: 0; /* 크기가 줄어들지 않게 합니다 */
+    }
+    
+    .product-info {
+        padding: 15px; /* 패딩을 줄입니다 */
+    }
+    
+    .product-name {
+        font-size: 1rem; /* 글자 크기를 줄입니다 */
+    }
+    
+    .product-time, .price-weekday, .price-weekend {
+        font-size: 0.75rem; /* 글자 크기를 줄입니다 */
+    }
+    
+    .description-preview p, .description-full p {
+        font-size: 0.75rem; /* 설명 글자 크기를 줄입니다 */
+    }
+    
+    /* 슬라이드 설명 텍스트 작은 모바일 크기 조정 */
+    .slide-description {
+        font-size: 1rem; /* 글자 크기를 더 작게 조정합니다 */
+        padding: 0 5px; /* 좌우 패딩을 더 줄입니다 */
+        line-height: 1.5; /* 줄간격을 줄입니다 */
+    }
+    
+    /* 슬라이드 내용 컨테이너 패딩 조정 */
+    .slide-content {
+        padding: 0 15px; /* 좌우 패딩을 줄입니다 */
+        max-width: 90%; /* 최대 너비를 줄입니다 */
+    }
+    
+    /* 화살표 버튼 작은 모바일 크기 조정 */
+    .carousel-btn {
+        width: 40px; /* 버튼 크기를 더 작게 만듭니다 */
+        height: 40px; /* 버튼 크기를 더 작게 만듭니다 */
+        font-size: 16px; /* 글자 크기를 더 작게 만듭니다 */
+    }
+    
+    .prev-btn {
+        left: 10px; /* 왼쪽 여백을 더 줄입니다 */
+    }
+    
+    .next-btn {
+        right: 10px; /* 오른쪽 여백을 더 줄입니다 */
+    }
+    
+    /* 인디케이터 위치 및 크기 조정 */
+    .slide-indicators {
+        bottom: 15px; /* 아래쪽 여백을 더 줄입니다 */
+        gap: 10px; /* 인디케이터들 사이 간격을 줄입니다 */
+    }
+    
+    .indicator {
+        width: 8px; /* 인디케이터 크기를 더 작게 만듭니다 */
+        height: 8px; /* 인디케이터 크기를 더 작게 만듭니다 */
+    }
+    
+    /* 모바일용 푸터 스타일 */
+    .footer {
+        padding: 40px 0 20px; /* 패딩을 더 줄입니다 */
+        margin-top: 40px; /* 위쪽 마진을 더 줄입니다 */
+    }
+    
+    .footer-container {
+        padding: 0 15px; /* 좌우 패딩을 줄입니다 */
+    }
+    
+    .footer-content {
+        grid-template-columns: 1fr; /* 1개 컬럼으로 변경합니다 */
+        gap: 25px; /* 간격을 더 줄입니다 */
+    }
+    
+    .footer-links {
+        margin-bottom: 30px; /* 마진을 더 줄입니다 */
+        padding-bottom: 20px; /* 패딩을 줄입니다 */
+    }
+    
+    .footer-link {
+        font-size: 1rem; /* 글자 크기를 줄입니다 */
+    }
+    
+    .footer-divider {
+        margin: 0 15px; /* 좌우 마진을 줄입니다 */
+    }
+    
+    .footer-section {
+        gap: 15px; /* 아이템 간격을 줄입니다 */
+    }
+    
+    .footer-bottom {
+        padding-top: 20px; /* 패딩을 줄입니다 */
+    }
+    
+    .footer-bottom p {
+        font-size: 0.8rem; /* 글자 크기를 더 줄입니다 */
+    }
+}
+
+/* ========== 프로덕트 섹션 스타일 ========== */
+
+/* 프로덕트 섹션 전체 스타일 */
+.product-section {
+    background-color: #f8f9fa; /* 연한 회색 배경색을 설정합니다 */
+    padding: 80px 0; /* 상하 80px 패딩을 줍니다 */
+    min-height: 100vh; /* 최소 높이를 화면 전체 높이로 설정합니다 */
+}
+
+/* 프로덕트 컨테이너 */
+.product-container {
+    max-width: 1400px; /* 최대 너비를 1400px로 제한합니다 */
+    margin: 0 auto; /* 가운데 정렬합니다 */
+    padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+}
+
+/* 매장 이미지 영역 */
+.shop-image {
+    text-align: center; /* 가운데 정렬합니다 */
+    margin-bottom: 60px; /* 아래쪽 마진을 60px 줍니다 */
+    overflow: hidden; /* 넘치는 부분을 숨깁니다 */
+    border-radius: 15px; /* 모서리를 15px만큼 둥글게 만듭니다 */
+}
+
+/* 매장 이미지 */
+.shop-img {
+    max-width: 100%; /* 최대 너비를 100%로 설정합니다 */
+    height: 400px; /* 높이를 400px로 고정합니다 */
+    width: 100%; /* 너비를 100%로 설정합니다 */
+    object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너를 채웁니다 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.1); /* 그림자를 추가합니다 */
+    transition: transform 0.3s ease; /* 변형에 0.3초 애니메이션을 적용합니다 */
+    display: block; /* 블록 요소로 표시합니다 */
+}
+
+/* 매장 이미지 호버 효과 */
+.shop-img:hover {
+    transform: scale(1.02); /* 마우스를 올리면 2% 크기가 커집니다 */
+}
+
+/* 프로덕트 타이틀 */
+.product-title {
+    font-size: 3rem; /* 글자 크기를 3rem으로 설정합니다 */
+    font-weight: 400; /* 글자 두께를 보통으로 설정합니다 */
+    color: #333; /* 글자색을 검은색으로 설정합니다 */
+    text-align: center; /* 가운데 정렬합니다 */
+    margin-bottom: 80px; /* 아래쪽 마진을 80px 줍니다 */
+    letter-spacing: 0.1em; /* 글자 간격을 넓게 설정합니다 */
+    text-transform: uppercase; /* 모든 글자를 대문자로 변환합니다 */
+}
+
+/* 프로덕트 그리드 */
+.product-grid {
+    display: grid; /* 그리드 레이아웃을 사용합니다 */
+    grid-template-columns: repeat(4, 1fr); /* 4개 열로 나눕니다 (2x4 형태) */
+    gap: 6px; /* 그리드 아이템들 사이 간격을 6px로 설정합니다 (좌우여백 3px씩) */
+    margin-bottom: 40px; /* 아래쪽 마진을 40px 줍니다 */
+}
+
+/* 개별 프로덕트 아이템 */
+.product-item {
+    background: white; /* 배경색을 흰색으로 설정합니다 */
+    border-radius: 15px; /* 모서리를 15px만큼 둥글게 만듭니다 */
+    overflow: hidden; /* 넘치는 부분을 숨깁니다 */
+    box-shadow: 0 5px 15px rgba(0,0,0,0.08); /* 그림자를 추가합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    flex-direction: column; /* 세로로 배치합니다 */
+}
+
+/* 프로덕트 아이템 호버 효과 */
+.product-item:hover {
+    transform: translateY(-5px); /* 마우스를 올리면 5px 위로 이동합니다 */
+    box-shadow: 0 15px 35px rgba(0,0,0,0.15); /* 그림자를 더 진하게 만듭니다 */
+}
+
+/* 프로덕트 이미지 영역 */
+.product-image {
+    width: 100%; /* 너비를 100%로 설정합니다 */
+    height: 250px; /* 높이를 250px로 고정합니다 */
+    overflow: hidden; /* 넘치는 부분을 숨깁니다 */
+}
+
+/* 프로덕트 이미지 */
+.product-img {
+    width: 100%; /* 너비를 100%로 설정합니다 */
+    height: 100%; /* 높이를 100%로 설정합니다 */
+    object-fit: cover; /* 이미지 비율을 유지하면서 컨테이너를 채웁니다 */
+    transition: transform 0.3s ease; /* 변형에 0.3초 애니메이션을 적용합니다 */
+}
+
+/* 프로덕트 이미지 호버 효과 */
+.product-item:hover .product-img {
+    transform: scale(1.05); /* 호버 시 이미지가 5% 확대됩니다 */
+}
+
+/* 프로덕트 정보 영역 */
+.product-info {
+    padding: 20px; /* 패딩을 20px로 설정합니다 */
+    flex-grow: 1; /* 남은 공간을 모두 차지합니다 */
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    flex-direction: column; /* 세로로 배치합니다 */
+}
+
+/* 프로덕트 이름 */
+.product-name {
+    font-size: 1.1rem; /* 글자 크기를 1.1rem으로 설정합니다 */
+    font-weight: 400; /* 글자 두께를 보통으로 설정합니다 */
+    color: #333; /* 글자색을 검은색으로 설정합니다 */
+    margin-bottom: 10px; /* 아래쪽 마진을 10px 줍니다 */
+    line-height: 1.3; /* 줄간격을 1.3배로 설정합니다 */
+}
+
+/* 프로덕트 시간 정보 */
+.product-time {
+    font-size: 0.9rem; /* 글자 크기를 0.9rem으로 설정합니다 */
+    color: #666; /* 글자색을 회색으로 설정합니다 */
+    margin-bottom: 8px; /* 아래쪽 마진을 8px 줍니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+}
+
+/* 프로덕트 가격 영역 */
+.product-price {
+    margin-bottom: 15px; /* 아래쪽 마진을 15px 줍니다 */
+}
+
+/* 가격 정보 공통 스타일 */
+.price-weekday, .price-weekend {
+    display: block; /* 블록 요소로 표시합니다 */
+    font-size: 0.85rem; /* 글자 크기를 0.85rem으로 설정합니다 */
+    margin-bottom: 4px; /* 아래쪽 마진을 4px 줍니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+}
+
+/* 평일 가격 스타일 */
+.price-weekday {
+    color: #555; /* 깔끔한 회색으로 설정합니다 */
+}
+
+/* 주말 가격 스타일 */
+.price-weekend {
+    color: #555; /* 깔끔한 회색으로 설정합니다 */
+}
+
+/* 프로덕트 설명 영역 */
+.product-description {
+    flex-grow: 1; /* 남은 공간을 모두 차지합니다 */
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    flex-direction: column; /* 세로로 배치합니다 */
+}
+
+/* 미리보기 설명 텍스트 */
+.description-preview {
+    margin-bottom: 15px; /* 아래쪽 마진을 15px 줍니다 */
+}
+
+/* 설명 텍스트 공통 스타일 */
+.description-preview p, .description-full p {
+    font-size: 0.8rem; /* 글자 크기를 0.8rem으로 설정합니다 */
+    color: #555; /* 글자색을 회색으로 설정합니다 */
+    line-height: 1.4; /* 줄간격을 1.4배로 설정합니다 */
+    margin-bottom: 5px; /* 아래쪽 마진을 5px 줍니다 */
+}
+
+/* 전체 설명 텍스트 (숨겨진 상태) */
+.description-full {
+    margin-bottom: 15px; /* 아래쪽 마진을 15px 줍니다 */
+}
+
+/* 더보기 버튼 */
+.more-btn {
+    background: #7f8c8d; /* 연한 그레이 배경을 설정합니다 */
+    color: white; /* 글자색을 흰색으로 설정합니다 */
+    border: none; /* 테두리를 제거합니다 */
+    border-radius: 20px; /* 모서리를 20px만큼 둥글게 만듭니다 */
+    padding: 8px 16px; /* 상하 8px, 좌우 16px 패딩을 줍니다 */
+    font-size: 0.8rem; /* 글자 크기를 0.8rem으로 설정합니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+    cursor: pointer; /* 클릭할 수 있다는 것을 표시합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+    align-self: flex-start; /* 왼쪽으로 정렬합니다 */
+    margin-top: auto; /* 위쪽 마진을 자동으로 설정해서 아래쪽에 배치합니다 */
+}
+
+/* 더보기 버튼 호버 효과 */
+.more-btn:hover {
+    background: #6c7b7d; /* 호버 시 조금 더 진한 그레이로 변경합니다 */
+    transform: translateY(-2px); /* 마우스를 올리면 2px 위로 이동합니다 */
+    box-shadow: 0 5px 15px rgba(127, 140, 141, 0.3); /* 연한 그레이 톤의 그림자를 추가합니다 */
+}
+
+/* ========== 브랜드 스토리 섹션 스타일 ========== */
+
+/* 브랜드 스토리 섹션 전체 스타일 */
+.brand-story-section {
+    background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%); /* 밝은 그라데이션 배경을 설정합니다 */
+    padding: 100px 0; /* 상하 100px 패딩을 줍니다 */
+    min-height: 80vh; /* 최소 높이를 화면의 80%로 설정합니다 */
+}
+
+/* 브랜드 스토리 컨테이너 */
+.brand-story-container {
+    max-width: 1200px; /* 최대 너비를 1200px로 제한합니다 */
+    margin: 0 auto; /* 가운데 정렬합니다 */
+    padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+}
+
+/* 브랜드 스토리 메인 콘텐츠 */
+.brand-story-content {
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    align-items: center; /* 세로 가운데 정렬합니다 */
+    gap: 60px; /* 이미지와 텍스트 사이 간격을 60px로 설정합니다 */
+    margin-bottom: 80px; /* 아래쪽 마진을 80px 줍니다 */
+}
+
+/* 브랜드 스토리 이미지 영역 */
+.brand-story-image {
+    flex: 1; /* 플렉스 비율을 1로 설정합니다 */
+    max-width: 500px; /* 최대 너비를 500px로 제한합니다 */
+}
+
+/* 브랜드 스토리 이미지 */
+.brand-img {
+    width: 100%; /* 전체 너비를 차지합니다 */
+    height: 400px; /* 높이를 400px로 설정합니다 */
+    object-fit: cover; /* 이미지 비율을 유지하면서 영역에 맞춥니다 */
+    border-radius: 20px; /* 모서리를 20px만큼 둥글게 만듭니다 */
+    box-shadow: 0 15px 40px rgba(0,0,0,0.15); /* 그림자를 추가합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+}
+
+/* 브랜드 이미지 호버 효과 */
+.brand-img:hover {
+    transform: scale(1.05); /* 마우스를 올리면 5% 크기가 커집니다 */
+    box-shadow: 0 20px 50px rgba(0,0,0,0.2); /* 그림자를 더 진하게 만듭니다 */
+}
+
+/* 브랜드 스토리 텍스트 영역 */
+.brand-story-text {
+    flex: 1; /* 플렉스 비율을 1로 설정합니다 */
+    max-width: 600px; /* 최대 너비를 600px로 제한합니다 */
+}
+
+/* 브랜드 스토리 타이틀 */
+.brand-story-title {
+    font-size: 2.8rem; /* 글자 크기를 2.8rem으로 설정합니다 */
+    font-weight: 400; /* 글자 두께를 프로그램 제목과 동일하게 설정합니다 */
+    color: #2c3e50; /* 글자색을 진한 회색으로 설정합니다 */
+    margin-bottom: 10px; /* 아래쪽 마진을 10px 줍니다 */
+    letter-spacing: 0.05em; /* 글자 간격을 넓게 설정합니다 */
+}
+
+/* 브랜드 스토리 서브타이틀 */
+.brand-story-subtitle {
+    font-size: 1.1rem; /* 글자 크기를 1.1rem으로 설정합니다 */
+    color: #7f8c8d; /* 글자색을 회색으로 설정합니다 */
+    margin-bottom: 40px; /* 아래쪽 마진을 40px 줍니다 */
+    font-weight: 300; /* 글자 두께를 얇게 설정합니다 */
+    letter-spacing: 0.02em; /* 글자 간격을 살짝 넓게 설정합니다 */
+}
+
+/* 스토리 미리보기와 전체 텍스트 공통 스타일 */
+.story-preview, .story-full {
+    line-height: 1.8; /* 줄간격을 1.8배로 설정합니다 */
+    margin-bottom: 30px; /* 아래쪽 마진을 30px 줍니다 */
+}
+
+/* 스토리 텍스트 */
+.story-preview p, .story-full p {
+    font-size: 1.1rem; /* 글자 크기를 1.1rem으로 설정합니다 */
+    color: #34495e; /* 글자색을 진한 회색으로 설정합니다 */
+    margin-bottom: 15px; /* 아래쪽 마진을 15px 줍니다 */
+    transition: color 0.3s ease; /* 색상 변화에 0.3초 애니메이션을 적용합니다 */
+}
+
+/* 더보기/닫기 버튼 */
+.story-toggle-btn {
+    background: #7f8c8d; /* 연한 그레이 배경을 설정합니다 */
+    color: white; /* 글자색을 흰색으로 설정합니다 */
+    border: none; /* 테두리를 없앱니다 */
+    padding: 12px 25px; /* 상하 12px, 좌우 25px 패딩을 줍니다 */
+    border-radius: 25px; /* 모서리를 25px만큼 둥글게 만듭니다 */
+    font-size: 1rem; /* 글자 크기를 1rem으로 설정합니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+    cursor: pointer; /* 마우스 커서를 포인터로 변경합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+    box-shadow: 0 4px 15px rgba(127, 140, 141, 0.3); /* 연한 그레이 톤의 그림자를 추가합니다 */
+}
+
+/* 더보기 버튼 호버 효과 */
+.story-toggle-btn:hover {
+    background: #6c7b7d; /* 호버 시 조금 더 진한 그레이로 변경합니다 */
+    transform: translateY(-2px) scale(1.05); /* 마우스를 올리면 2px 위로 이동하고 5% 확대됩니다 */
+    box-shadow: 0 6px 20px rgba(127, 140, 141, 0.4); /* 연한 그레이 톤의 그림자를 더 진하게 만듭니다 */
+}
+
+/* 브랜드 스토리 예약 안내 */
+.reservation-notice-brand {
+    background: white; /* 깔끔한 흰색 배경을 설정합니다 */
+    padding: 40px; /* 패딩을 40px로 설정합니다 */
+    border-radius: 15px; /* 모서리를 15px만큼 둥글게 만듭니다 */
+    text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1); /* 은은한 그림자를 추가합니다 */
+    border: 1px solid #e9ecef; /* 연한 회색 테두리를 추가합니다 */
+}
+
+
+
+/* 예약 안내 내용 컨테이너 */
+.reservation-content-brand {
+    color: #2c3e50; /* 전체 텍스트를 진한 회색으로 설정합니다 */
+}
+
+/* 한국어/영어 섹션 */
+.notice-section-kr, .notice-section-en {
+    margin-bottom: 25px; /* 아래쪽 마진을 25px 줍니다 */
+}
+
+.notice-section-en {
+    margin-bottom: 0; /* 마지막 섹션은 아래쪽 마진을 없앱니다 */
+}
+
+/* 예약 안내 타이틀 */
+.notice-title-brand-kr, .notice-title-brand-en {
+    font-size: 1.4rem; /* 글자 크기를 1.4rem으로 설정합니다 */
+    font-weight: 600; /* 글자 두께를 중간으로 설정합니다 */
+    color: #b09364; /* 글자색을 갈색으로 설정합니다 */
+    margin-bottom: 15px; /* 아래쪽 마진을 15px 줍니다 */
+    letter-spacing: 0.02em; /* 글자 간격을 살짝 넓게 설정합니다 */
+}
+
+.notice-title-brand-en {
+    font-size: 1.2rem; /* 영어 타이틀을 조금 작게 설정합니다 */
+}
+
+/* 예약 안내 텍스트 */
+.notice-text-brand p {
+    font-size: 1rem; /* 글자 크기를 1rem으로 설정합니다 */
+    line-height: 1.6; /* 줄간격을 1.6배로 설정합니다 */
+    margin-bottom: 8px; /* 아래쪽 마진을 8px 줍니다 */
+    color: #555; /* 진한 회색으로 설정합니다 */
+}
+
+/* 연락처 정보 */
+.contact-info-brand {
+    background: #f8f9fa; /* 연한 회색 배경을 설정합니다 */
+    padding: 18px; /* 패딩을 18px로 설정합니다 */
+    border-radius: 10px; /* 모서리를 10px만큼 둥글게 만듭니다 */
+    margin: 15px 0; /* 상하 마진을 15px씩 줍니다 */
+    border: 1px solid #e9ecef; /* 연한 회색 테두리를 추가합니다 */
+}
+
+.contact-info-brand p {
+    font-size: 1.1rem; /* 글자 크기를 1.1rem으로 설정합니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+    margin-bottom: 8px; /* 아래쪽 마진을 8px 줍니다 */
+    color: #2c3e50; /* 진한 회색으로 설정합니다 */
+}
+
+.contact-info-brand p:last-child {
+    margin-bottom: 0; /* 마지막 요소는 아래쪽 마진을 없앱니다 */
+}
+
+/* 연락처 아이콘 */
+.contact-icon-brand {
+    font-size: 1.2rem; /* 아이콘 크기를 1.2rem으로 설정합니다 */
+    margin-right: 8px; /* 오른쪽 마진을 8px 줍니다 */
+    color: #b09364; /* 아이콘을 갈색으로 설정합니다 */
+}
+
+/* 예약 안내 마무리 텍스트 */
+.notice-footer-brand {
+    font-size: 0.95rem; /* 글자 크기를 조금 작게 설정합니다 */
+    margin-top: 15px; /* 위쪽 마진을 15px 줍니다 */
+    margin-bottom: 5px; /* 아래쪽 마진을 5px 줍니다 */
+    font-weight: 400; /* 글자 두께를 보통으로 설정합니다 */
+    color: #666; /* 중간 회색으로 설정합니다 */
+}
+
+/* 구분선 */
+.divider-brand {
+    width: 60%; /* 너비를 60%로 설정합니다 */
+    height: 1px; /* 높이를 1px로 설정합니다 */
+    background: #e9ecef; /* 연한 회색 배경을 설정합니다 */
+    margin: 25px auto; /* 상하 마진 25px, 좌우 가운데 정렬합니다 */
+    border-radius: 1px; /* 모서리를 1px만큼 둥글게 만듭니다 */
+}
+
+/* ========== 이용안내 섹션 스타일 ========== */
+
+/* 이용안내 섹션 전체 스타일 */
+.guide-section {
+    background: #f8f9fa; /* 깔끔한 연한 회색 배경을 설정합니다 */
+    padding: 100px 0; /* 상하 100px 패딩을 줍니다 */
+    min-height: 100vh; /* 최소 높이를 화면 전체 높이로 설정합니다 */
+}
+
+/* 이용안내 컨테이너 */
+.guide-container {
+    max-width: 1400px; /* 최대 너비를 1400px로 제한합니다 */
+    margin: 0 auto; /* 가운데 정렬합니다 */
+    padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+}
+
+/* 이용안내 타이틀 */
+.guide-title {
+    font-size: 3.5rem; /* 글자 크기를 3.5rem으로 설정합니다 */
+    font-weight: 400; /* 글자 두께를 깔끔하게 설정합니다 */
+    color: #2c3e50; /* 글자색을 진한 회색으로 설정합니다 */
+    text-align: center; /* 가운데 정렬합니다 */
+    margin-bottom: 10px; /* 아래쪽 마진을 10px 줍니다 */
+    letter-spacing: 0.1em; /* 글자 간격을 넓게 설정합니다 */
+}
+
+/* 이용안내 서브타이틀 */
+.guide-subtitle {
+    font-size: 1.3rem; /* 글자 크기를 1.3rem으로 설정합니다 */
+    color: #7f8c8d; /* 회색으로 설정합니다 */
+    text-align: center; /* 가운데 정렬합니다 */
+    margin-bottom: 80px; /* 아래쪽 마진을 80px 줍니다 */
+    font-weight: 300; /* 글자 두께를 얇게 설정합니다 */
+    letter-spacing: 0.05em; /* 글자 간격을 살짝 넓게 설정합니다 */
+}
+
+/* 이용안내 그리드 */
+.guide-grid {
+    display: grid; /* 그리드 레이아웃을 사용합니다 */
+    grid-template-columns: repeat(4, 1fr); /* 가로 4개씩 고정 배치합니다 */
+    gap: 25px; /* 그리드 아이템들 사이 간격을 25px로 설정합니다 */
+    margin-bottom: 40px; /* 아래쪽 마진을 40px 줍니다 */
+}
+
+/* 개별 이용안내 아이템 */
+.guide-item {
+    background: white; /* 깔끔한 흰색 배경을 설정합니다 */
+    border-radius: 15px; /* 모서리를 15px만큼 둥글게 만듭니다 */
+    padding: 35px; /* 패딩을 35px로 설정합니다 */
+    box-shadow: 0 5px 20px rgba(0,0,0,0.1); /* 은은한 그림자를 추가합니다 */
+    transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    flex-direction: column; /* 세로로 배치합니다 */
+    text-align: center; /* 텍스트를 가운데 정렬합니다 */
+    border: 1px solid #e9ecef; /* 연한 회색 테두리를 설정합니다 */
+}
+
+/* 이용안내 아이템 호버 효과 */
+.guide-item:hover {
+    transform: translateY(-5px); /* 마우스를 올리면 5px 위로 이동합니다 */
+    box-shadow: 0 10px 30px rgba(0,0,0,0.15); /* 그림자를 조금 더 진하게 만듭니다 */
+    border-color: #95a5a6; /* 테두리 색상을 조금 더 진하게 바꿉니다 */
+}
+
+
+
+/* 이용안내 아이템 타이틀 */
+.guide-item-title {
+    font-size: 1.5rem; /* 글자 크기를 1.5rem으로 설정합니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+    color: #2c3e50; /* 글자색을 진한 회색으로 설정합니다 */
+    margin-bottom: 20px; /* 아래쪽 마진을 20px 줍니다 */
+    margin-top: 0; /* 위쪽 마진을 제거합니다 */
+    border-bottom: 2px solid #95a5a6; /* 아래쪽에 회색 테두리를 추가합니다 */
+    padding-bottom: 10px; /* 아래쪽 패딩을 10px 줍니다 */
+    transition: color 0.3s ease; /* 색상 변화에 0.3초 애니메이션을 적용합니다 */
+}
+
+/* 타이틀 호버 효과 */
+.guide-item:hover .guide-item-title {
+    color: #7f8c8d; /* 호버 시 타이틀 색상을 회색으로 변경합니다 */
+}
+
+/* 이용안내 내용 */
+.guide-content {
+    text-align: left; /* 텍스트를 왼쪽 정렬합니다 */
+    line-height: 1.7; /* 줄간격을 1.7배로 설정합니다 */
+}
+
+/* 이용안내 내용 텍스트 */
+.guide-content p {
+    font-size: 1rem; /* 글자 크기를 1rem으로 설정합니다 */
+    color: #555; /* 글자색을 회색으로 설정합니다 */
+    margin-bottom: 12px; /* 아래쪽 마진을 12px 줍니다 */
+    transition: color 0.3s ease; /* 색상 변화에 0.3초 애니메이션을 적용합니다 */
+}
+
+/* 한국어와 영어 섹션 구분을 위한 br 태그 스타일 */
+.guide-content br {
+    margin-bottom: 15px; /* br 태그 다음에 15px 여백을 추가합니다 */
+    display: block; /* 블록 요소로 표시합니다 */
+}
+
+/* 강조 텍스트 스타일 */
+.guide-content p strong {
+    color: #2c3e50; /* 강조 텍스트를 진한 회색으로 설정합니다 */
+    font-weight: 600; /* 글자 두께를 조금 굵게 설정합니다 */
+}
+
+/* 경고 텍스트 스타일 */
+.guide-content .warning {
+    font-weight: 700; /* 글자 두께를 굵게 설정합니다 */
+    color: #2c3e50; /* 진한 회색으로 설정합니다 */
+    margin-top: 15px; /* 위쪽 마진을 15px 줍니다 */
+}
+
+/* ========== 푸터 섹션 스타일 ========== */
+
+/* 푸터 전체 스타일 */
+.footer {
+    background: #f8f9fa; /* 연한 회색 배경을 설정합니다 */
+    color: #2c3e50; /* 진한 회색 글자색을 설정합니다 */
+    padding: 60px 0 30px; /* 상단 60px, 하단 30px 패딩을 설정합니다 */
+    margin-top: 80px; /* 위쪽 마진을 80px 줍니다 */
+    border-top: 1px solid #dee2e6; /* 상단에 구분선을 추가합니다 */
+}
+
+/* 푸터 컨테이너 */
+.footer-container {
+    max-width: 1200px; /* 최대 너비를 1200px로 제한합니다 */
+    margin: 0 auto; /* 가운데 정렬합니다 */
+    padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+}
+
+/* 상단 링크 영역 */
+.footer-links {
+    text-align: center; /* 가운데 정렬합니다 */
+    margin-bottom: 50px; /* 아래쪽 마진을 50px 줍니다 */
+    padding-bottom: 30px; /* 아래쪽 패딩을 30px 줍니다 */
+    border-bottom: 1px solid #dee2e6; /* 하단에 연한 회색 구분선을 추가합니다 */
+}
+
+.footer-link {
+    color: #b09364; /* 브랜드 컬러로 설정합니다 */
+    text-decoration: none; /* 밑줄을 제거합니다 */
+    font-size: 1.1rem; /* 글자 크기를 1.1rem으로 설정합니다 */
+    font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
+    transition: color 0.3s ease; /* 색상 변화에 0.3초 애니메이션을 적용합니다 */
+}
+
+.footer-link:hover {
+    color: #d4c19c; /* 호버 시 밝은 갈색으로 변경합니다 */
+}
+
+.footer-divider {
+    margin: 0 20px; /* 좌우 마진을 20px씩 줍니다 */
+    color: #6c757d; /* 중간 회색으로 설정합니다 */
+}
+
+/* 푸터 메인 컨텐츠 */
+.footer-content {
+    display: grid; /* 그리드 레이아웃을 사용합니다 */
+    grid-template-columns: repeat(3, 1fr); /* 3개 컬럼으로 설정합니다 */
+    gap: 40px; /* 컬럼 간격을 40px로 설정합니다 */
+    margin-bottom: 40px; /* 아래쪽 마진을 40px 줍니다 */
+}
+
+/* 각 푸터 섹션 */
+.footer-section {
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    flex-direction: column; /* 세로 방향으로 배치합니다 */
+    gap: 20px; /* 아이템 간격을 20px로 설정합니다 */
+}
+
+/* 개별 푸터 아이템 */
+.footer-item {
+    display: flex; /* 플렉스 박스를 사용합니다 */
+    flex-direction: column; /* 세로 방향으로 배치합니다 */
+    gap: 5px; /* 라벨과 값 사이 간격을 5px로 설정합니다 */
+}
+
+/* 푸터 라벨 */
+.footer-label {
+    color: #b09364; /* 브랜드 컬러로 설정합니다 */
+    font-weight: 600; /* 글자 두께를 조금 굵게 설정합니다 */
+    font-size: 0.95rem; /* 글자 크기를 0.95rem으로 설정합니다 */
+    letter-spacing: 0.02em; /* 글자 간격을 살짝 넓게 설정합니다 */
+}
+
+/* 푸터 값 */
+.footer-value {
+    color: #495057; /* 진한 회색으로 설정합니다 */
+    font-size: 0.9rem; /* 글자 크기를 0.9rem으로 설정합니다 */
+    line-height: 1.5; /* 줄간격을 1.5배로 설정합니다 */
+}
+
+/* 하단 카피라이트 */
+.footer-bottom {
+    text-align: center; /* 가운데 정렬합니다 */
+    padding-top: 30px; /* 위쪽 패딩을 30px 줍니다 */
+    border-top: 1px solid #dee2e6; /* 상단에 연한 회색 구분선을 추가합니다 */
+}
+
+.footer-bottom p {
+    color: #6c757d; /* 중간 회색으로 설정합니다 */
+    font-size: 0.85rem; /* 글자 크기를 0.85rem으로 설정합니다 */
+    margin: 0; /* 마진을 제거합니다 */
+}
+

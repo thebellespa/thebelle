@@ -1,0 +1,55 @@
+브랜드 히스토리 안내
+
+기본가이드>
+- 모든 화면은 반응형으로 만들어서, 웹과 모바일 모두에서 잘 보이게 해야 한다. 
+- 폰트는 넥슨폰트 (웹폰트)
+- 모든 문장에는 초등생용 주석을 답니다.
+
+배치가이드>
+-브랜드스토리
+- 좌측에 images/brandstory1.jpg 사진을 가독성  좋게 넣는다.
+- 좌측의 이미지 오른쪽에 글상자를 배치하고, 다음의 글을  넣는다
+
+
+
+1996년 시작된 더벨스파는 고객의 깊은 회복과 감동을 위해
+‘완벽한 휴식’과 ‘눈에 보이는 변화’를 추구해온 고품격 스파 브랜드입니다.
+
+한국의 전통 방짜유기 테라피와 최첨단 테크닉을 결합한
+시그니처 리추얼을 통해
+몸과 마음의 균형을 되찾는 진정한 웰니스 경험을 선사합니다.
+
+콘래드 서울에서만 만나실 수 있는
+전통과 혁신이 조화된 더벨스파의 프리미엄 힐링을 경험해보세요.
+
+
+
+- 이 것을 다 보이지 말고,  4줄만 보이게 한다. 
+'더보기' 버튼을 만들어, 누르면, 전체화면으로 보이게 한다. 
+'닫기' 버튼도 만들어라
+
+맨 아랫쪽에 이 글을 눈에 잘띄게 보여준다.
+
+[예약 안내]
+
+현재 온라인 예약 시스템이 일시적으로 중단되어 불편을 끼쳐드린 점, 깊이 양해 부탁드립니다.
+당분간 예약은 아래 연락처를 통해 도와드리고 있으니 많은 이용 바랍니다.
+
+📞 전화: 000-0000-0000
+📧 이메일: example@email.com
+
+최대한 빠르게 정상화할 수 있도록 노력하겠습니다. 감사합니다.
+
+[Reservation Notice]
+We sincerely apologize for the inconvenience as our online reservation system is temporarily unavailable.
+In the meantime, please make your reservations through the contact information below.
+
+📞 Phone: 000-0000-0000
+📧 Email: example@email.com
+
+
+We are working to restore the system as soon as possible.
+Thank you for your understanding.
+
+
+

@@ -1,0 +1,162 @@
+product 부분
+
+기본가이드>
+- 이 프로그램은 웹과 모바일 모두에서 잘 보이게 반응형 프로그램으로 만든다
+- 폰트는 넥슨폰트 (웹폰트)
+- 모든 문장에는 초등생용 주석을 달아다오. 
+
+배치가이드>
+- Container를 만듭니다. 
+- 가장 위쪽에 매장의 대표 이미지를 배치합니다. (images/shop1.jpg)
+- <h1 class="product-title">The Belle spa program </h1> 배치한다, 검은색 큰 글씨
+- 그 아래에 4개의 ‘제품이미지+설명’을 배치합니다. (images/pd1~pd8)
+- 제품들은 2X4 형태로 배치합니다. 
+- 각각의 제품이미지는 상단에, 그 아래에 설명문을 보여줍니다. 
+- 각각의 제품이미지는 좌우여백을 3px 씩만 줍니다.
+
+제품안내>
+
+제품 1
+
+THE BELLE BANGZZA YUGI RESET THERAPY
+ 1hour / 1.5hours / 2 hours
+ Weekday ₩ 258,000 / 360,000 / 456,000
+ Weekend ₩ 280,000 / 382,000 / 478,000
+더벨 방짜유기 리셋 테라피는 전통 방짜유기를 활용해 긴장된 근육과 유착
+된 근막을 섬세하게 이완시키고, 에너지 순환을 도와 피로를 해소하고 매
+끈하고 슬림한 바디라인으로 가꿔주는 테라피입니다.
+ The Bele Bangja Yugi Reset Therapy. This treatment uses traditional
+ Korean Bangja Yugi tools to gently release tension in the muscles and
+ fascia, promoting energy flow, relieving fatigue, and refining the body
+ into a slimmer, smoother silhouette.
+ —
+ Welcome Touch – Back – Legs – Abdomen - Arms – Decolete - Scal
+
+
+제품2
+
+BELLASSAGE BODY THERAPY
+ 1hour / 1.5 hours
+ Weekday ₩ 231,000 / 297,000
+ Weekend ₩ 253,000 / 319,000
+벨라사지 바디 테라피는 근육의 결을 따라 부드럽게 마사지하므로 혈류와
+림프 순환을 촉진해 피로 회복과 바디라인 개선에 효과적입니다.
+ Belassage Body Therapy gently folows the natural grain of the
+ muscles, promoting blood and lymphatic circulation to relieve fatigue
+ and enhance body contour.
+ —
+ Welcome Touch – Back – Legs – Abdomen - Arms – Decolete - Scalp
+
+
+제품3
+
+REVIVE AROMA STONE THERAPY
+ 1hour / 1.5hours 
+Weekday ₩ 237,000 / 328,500
+ Weekend ₩ 259,000 / 350,500
+따뜻한 핫스톤의 온열 효과와 아로마 테라피가 어우러져 긴장된 근육을 이
+완시키고, 심신의 깊은 안정과 회복을 선사하는 테라피입니다.
+ This therapy combines the soothing warmth of hot stones with the
+ benefits of aroma therapy, relaxing tense muscles and providing deep
+ rest and renewal for both body and mind.
+ —
+ Welcome Touch – Back – Legs – Abdomen - Arms – Decolete - Scalp
+
+
+제품4
+
+DEEP PRESSURE STRESS RELIEF THERAPY
+ 1hour / 1.5 hours
+ Weekday ₩ 240,000 / 333,000
+ Weekend ₩ 262,000 / 355,000
+전신의 경혈과 근육을 깊고 강한 압으로 자극하여, 스트레스로 뭉친 몸과
+마음의 균형을 회복하는 테라피입니다.
+ This therapy applies deep, firm pressure to key acupoints and
+ muscles, helping to restore balance to the body and mind affected by
+ stress.
+ —
+ Welcome Touch – Back – Legs – Abdomen - Arms – Decolete - Scalp
+
+
+제품5
+
+THE BELLE REFRESH JOURNEY
+ 2.5 hours
+ Weekday ₩ 511,000
+ Weekend ₩ 533,000
+완벽한 휴식을 위한 디스트레스 트리트먼트로
+바디 각질 제거와 근육 이완을 돕는 바디마사지로 포함한
+전신 보습 관리입니다.
+ Indulge in a whole body moisturizing treatment 
+for the perfect combination of body exfoliation and muscle relaxation.
+
+ —
+Anti-aging Body Scrub & Vichy Shower
+ Belassage Body Massage
+ Mini Facial
+ 
+
+제품6
+
+COUPLE SPA PACKAGE
+ 2 hours
+ Weekday ₩ 715,000 (for 2)
+ Weekend ₩ 759,000 (for 2)
+편안한 분위기의 하모니 커플룸에서 두 분이 함께 즐길 수 있도록
+준비된 트리트먼트입니다
+
+ Our couples’ spa package is designed for both of you to enjoy in
+ our ‘Harmony’ treatment room. Enjoy a complete romantic and
+  relaxing atmosphere. Luxuriate yourself in a double bed
+ treatment room.
+
+ —
+Belassage Body Therapy  90mins
+ Mini Facial 30mins
+
+
+제품7
+
+ COMFORT BACK
+ 1 hour
+ Weekday ₩ 231,000
+ Weekend ₩ 253,000
+등의 뭉친 근육을 집중적으로 풀어주고,
+긴장된 어깨와 등 라인을 편안하게 
+이완시켜주는 테라피입니다.
+This therapy focuses on releasing tight muscles in
+ the back, gently relaxing tension in the shoulders
+ and back line for complete comfort
+
+ —
+De Stress Muscle gel - De Stress Muscle 
+Body oil massage (Back, decolete & scalp) 
+
+
+제품8
+
+THE BELLE COLLAGEN  LIFT TREATMENTS
+ 1.5hours
+ Weekday ₩ 420,000
+ Weekend ₩ 442,000
+피부 구조를 바로잡고 탄력, 결, 밀도를 복원하는 프리
+미엄 콜라겐 테라피입니다. 1:1 맞춤 테크닉으로 피부
+장벽을 정돈하고, 97% 인체 유사 콜라겐을 진피 깊숙이
+전달하여 탄탄한 피부결과 볼륨감 있는 밀도 탄력을 선
+사합니다. 
+A premium colagen therapy that restores skin
+ structure, elasticity, texture, and density.
+ Through personalized techniques, it strengthens the
+ skin barrier and delivers 97% bio-identical colagen
+ deep into the dermis, promoting refined texture and
+ visibly firmer, volumized skin.
+
+—
+Cleansing -Deep cleansing- Face & Decolete 
+Technique - Reeve Velvet Mask - Scalp
+
+
+
+제품1~제품8까지의 설명은 3줄만 보이게 하고, '더보기' 버튼을 만들고, 이 버튼을 누르면 전체보기를 하라. 
+
+
