@@ -453,11 +453,7 @@ body {
         margin-bottom: 60px; /* 아래쪽 마진을 줄입니다 */
     }
     
-    .guide-grid {
-        grid-template-columns: 1fr !important; /* 강제로 1열로 변경합니다 */
-        gap: 20px !important; /* 간격을 줄입니다 */
-        max-width: 100% !important; /* 최대 너비를 100%로 제한 */
-    }
+
     
     .guide-item {
         padding: 25px; /* 패딩을 줄입니다 */
@@ -751,11 +747,7 @@ body {
         margin-bottom: 40px; /* 아래쪽 마진을 줄입니다 */
     }
     
-    .guide-grid {
-        grid-template-columns: 1fr !important; /* 강제로 1열로 변경합니다 */
-        gap: 20px !important; /* 간격을 더 줄입니다 */
-        max-width: 100% !important; /* 최대 너비를 100%로 제한 */
-    }
+
     
     .guide-item {
         padding: 20px; /* 패딩을 더 줄입니다 */
@@ -910,6 +902,43 @@ body {
     }
 }
 
+/* 모바일에서 이용안내 그리드를 강제로 한 열로 표시하는 추가 스타일 */
+@media (max-width: 768px) {
+    .guide-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        gap: 20px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+    }
+    
+    .guide-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-grid {
+        display: grid !important;
+        grid-template-columns: 1fr !important;
+        grid-template-rows: auto !important;
+        gap: 15px !important;
+        width: 100% !important;
+        max-width: 100% !important;
+        padding: 0 10px !important;
+    }
+    
+    .guide-item {
+        width: 100% !important;
+        max-width: 100% !important;
+        margin: 0 !important;
+        padding: 20px !important;
+    }
+}
+
 /* 매우 작은 모바일 화면 (400px 이하) */
 @media (max-width: 400px) {
     /* 제품 그리드를 확실히 한 열로 설정 */
@@ -937,12 +966,7 @@ body {
         padding: 15px !important; /* 패딩 조정 */
     }
     
-    /* 이용안내 그리드를 확실히 한 열로 설정 */
-    .guide-grid {
-        grid-template-columns: 1fr !important; /* 강제로 한 열로 설정 */
-        gap: 15px !important; /* 간격을 조정 */
-        padding: 0 10px !important; /* 좌우 패딩 추가 */
-    }
+
     
     /* 이용안내 아이템을 확실히 세로 배치 */
     .guide-item {
@@ -1382,6 +1406,21 @@ body {
     grid-template-columns: repeat(4, 1fr); /* 가로 4개씩 고정 배치합니다 */
     gap: 25px; /* 그리드 아이템들 사이 간격을 25px로 설정합니다 */
     margin-bottom: 40px; /* 아래쪽 마진을 40px 줍니다 */
+}
+
+/* 모바일에서 이용안내 그리드를 한 열로 표시 */
+@media (max-width: 768px) {
+    .guide-grid {
+        grid-template-columns: 1fr !important; /* 강제로 1열로 변경 */
+        gap: 20px !important; /* 간격 조정 */
+    }
+}
+
+@media (max-width: 480px) {
+    .guide-grid {
+        grid-template-columns: 1fr !important; /* 강제로 1열로 변경 */
+        gap: 15px !important; /* 간격 조정 */
+    }
 }
 
 /* 개별 이용안내 아이템 */
