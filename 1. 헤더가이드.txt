@@ -14,7 +14,6 @@
 배치가이드>
 - 가장 왼쪽에 Logo (images/logo1.png)
 - 그 옆에 차례로 BRAND STORY, PROGRAMS, Information 배치하고 가운데 정열한다. 
-- 맨 오른쪽에 로그인 버튼 (흰색바탕, 검은색 테두리, radius 25)
 - 가로로 나란히 보기 좋게 정열할 것. 
 
 디자인 기준은 다음과 같다. 
