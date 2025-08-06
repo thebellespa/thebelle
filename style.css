@@ -50,6 +50,9 @@ body {
     height: 50px; /* 로고 높이를 50px로 설정합니다 */
     width: auto; /* 너비는 비율에 맞게 자동으로 조정합니다 */
     object-fit: contain; /* 이미지 비율을 유지하면서 크기를 맞춥니다 */
+    filter: contrast(1.1) brightness(1.05); /* 대비와 밝기를 약간 높여서 더 선명하게 만듭니다 */
+    image-rendering: -webkit-optimize-contrast; /* 웹킷 브라우저에서 이미지 선명도 최적화 */
+    image-rendering: crisp-edges; /* 이미지 선명도 최적화 */
 }
 
 /* 네비게이션 메뉴 영역 스타일 */
@@ -198,7 +201,7 @@ body {
     max-width: 600px; /* 최대 너비를 600px로 확대합니다 */
     width: 90%; /* 부모 요소의 90% 너비를 차지합니다 */
     height: auto; /* 비율을 유지하면서 높이를 자동으로 조정합니다 */
-    filter: drop-shadow(3px 3px 6px rgba(0,0,0,0.8)); /* 이미지에 더 진한 그림자를 넣어서 잘 보이게 합니다 */
+    filter: none; /* 그림자를 제거하여 깔끔하게 만듭니다 */
     transition: all 0.3s ease; /* 모든 변화에 0.3초 애니메이션을 적용합니다 */
     object-fit: contain; /* 이미지 비율을 유지하면서 컨테이너에 맞춥니다 */
 }
@@ -206,7 +209,7 @@ body {
 /* 로고 이미지 호버 효과 */
 .hero-logo-img:hover {
     transform: scale(1.05); /* 마우스를 올리면 5% 크기가 커집니다 */
-    filter: drop-shadow(4px 4px 8px rgba(0,0,0,0.9)); /* 호버 시 그림자를 더 진하게 만듭니다 */
+    filter: none; /* 호버 시에도 그림자를 제거하여 깔끔하게 유지합니다 */
 }
 
 /* 로고 이미지 페이드인 애니메이션 */
@@ -371,6 +374,9 @@ body {
     /* 로고 크기를 조정합니다 */
     .logo-img {
         height: 40px;
+        filter: contrast(1.1) brightness(1.05); /* 대비와 밝기를 약간 높여서 더 선명하게 만듭니다 */
+        image-rendering: -webkit-optimize-contrast; /* 웹킷 브라우저에서 이미지 선명도 최적화 */
+        image-rendering: crisp-edges; /* 이미지 선명도 최적화 */
     }
     
     /* 히어로 섹션 모바일 스타일 */
@@ -612,6 +618,9 @@ body {
     /* 로고를 더 작게 만듭니다 */
     .logo-img {
         height: 35px;
+        filter: contrast(1.1) brightness(1.05); /* 대비와 밝기를 약간 높여서 더 선명하게 만듭니다 */
+        image-rendering: -webkit-optimize-contrast; /* 웹킷 브라우저에서 이미지 선명도 최적화 */
+        image-rendering: crisp-edges; /* 이미지 선명도 최적화 */
     }
     
     /* 모바일 메뉴 버튼 크기를 조정합니다 */
