@@ -238,6 +238,17 @@ body {
     opacity: 0.95; /* 약간 투명하게 만들어서 우아함을 더합니다 */
 }
 
+/* 슬라이드 영어 설명 텍스트 */
+.slide-description-en {
+    font-size: 1rem; /* 글자 크기를 1rem으로 설정하여 한국어보다 작게 만듭니다 */
+    font-weight: 300; /* 글자 두께를 얇게 설정합니다 */
+    line-height: 1.4; /* 줄간격을 1.4배로 설정합니다 */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.7); /* 글자에 그림자를 넣어서 잘 보이게 합니다 */
+    margin: 10px auto 0; /* 위쪽 마진을 10px 주고 가운데 정렬합니다 */
+    max-width: 600px; /* 최대 너비를 600px로 제한합니다 */
+    opacity: 0.9; /* 약간 투명하게 만들어서 우아함을 더합니다 */
+}
+
 /* 슬라이드 설명 텍스트 페이드인 애니메이션 */
 @keyframes textFadeIn {
     from {
@@ -253,6 +264,11 @@ body {
 /* 활성 슬라이드의 텍스트에 애니메이션 적용 */
 .slide.active .slide-description {
     animation: textFadeIn 1.5s ease-out 0.3s both; /* 0.3초 딜레이 후 1.5초에 걸쳐 페이드인 애니메이션을 실행합니다 */
+}
+
+/* 활성 슬라이드의 영어 텍스트에 애니메이션 적용 */
+.slide.active .slide-description-en {
+    animation: textFadeIn 1.5s ease-out 0.5s both; /* 0.5초 딜레이 후 1.5초에 걸쳐 페이드인 애니메이션을 실행합니다 */
 }
 
 /* 캐러셀 화살표 버튼 공통 스타일 */
@@ -515,6 +531,13 @@ body {
     .slide-description {
         font-size: 1.1rem; /* 글자 크기를 작게 조정합니다 */
         padding: 0 10px; /* 좌우 패딩을 줄입니다 */
+    }
+    
+    /* 슬라이드 영어 설명 텍스트 모바일 크기 조정 */
+    .slide-description-en {
+        font-size: 0.9rem; /* 글자 크기를 작게 조정합니다 */
+        padding: 0 10px; /* 좌우 패딩을 줄입니다 */
+        margin: 8px auto 0; /* 위쪽 마진을 줄입니다 */
     }
     
     /* 화살표 버튼 모바일 크기 조정 */
@@ -827,6 +850,14 @@ body {
         font-size: 1rem; /* 글자 크기를 더 작게 조정합니다 */
         padding: 0 5px; /* 좌우 패딩을 더 줄입니다 */
         line-height: 1.5; /* 줄간격을 줄입니다 */
+    }
+    
+    /* 슬라이드 영어 설명 텍스트 작은 모바일 크기 조정 */
+    .slide-description-en {
+        font-size: 0.8rem; /* 글자 크기를 더 작게 조정합니다 */
+        padding: 0 5px; /* 좌우 패딩을 더 줄입니다 */
+        line-height: 1.3; /* 줄간격을 줄입니다 */
+        margin: 5px auto 0; /* 위쪽 마진을 줄입니다 */
     }
     
     /* 슬라이드 내용 컨테이너 패딩 조정 */
