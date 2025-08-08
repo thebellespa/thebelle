@@ -748,6 +748,9 @@ body {
     .contact-info-brand p {
         font-size: 0.9rem; /* 연락처 글자 크기를 더 줄입니다 */
         margin-bottom: 6px; /* 아래쪽 마진을 줄입니다 */
+        word-wrap: break-word; /* 긴 단어 줄바꿈 */
+        overflow-wrap: break-word; /* 긴 단어 줄바꿈 (모던 브라우저) */
+        text-align: center; /* 가운데 정렬 */
     }
     
     .contact-icon-brand {
@@ -1020,6 +1023,14 @@ body {
     .membership-container,
     .footer-container {
         padding: 0 10px !important; /* 좌우 패딩을 10px로 줄임 */
+    }
+    
+    /* 연락처 정보 이메일 줄바꿈 */
+    .contact-info-brand p {
+        font-size: 0.8rem !important; /* 글자 크기를 더 줄임 */
+        word-wrap: break-word !important; /* 긴 단어 줄바꿈 */
+        overflow-wrap: break-word !important; /* 긴 단어 줄바꿈 (모던 브라우저) */
+        text-align: center !important; /* 가운데 정렬 */
     }
     
     /* 이용안내 아이템을 확실히 세로 배치 */
@@ -1395,6 +1406,9 @@ body {
     font-weight: 500; /* 글자 두께를 중간으로 설정합니다 */
     margin-bottom: 8px; /* 아래쪽 마진을 8px 줍니다 */
     color: #2c3e50; /* 진한 회색으로 설정합니다 */
+    word-wrap: break-word; /* 긴 단어 줄바꿈 */
+    overflow-wrap: break-word; /* 긴 단어 줄바꿈 (모던 브라우저) */
+    text-align: center; /* 가운데 정렬 */
 }
 
 .contact-info-brand p:last-child {
