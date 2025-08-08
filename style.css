@@ -8,6 +8,7 @@
 /* 부드러운 스크롤 효과 설정 */
 html {
     scroll-behavior: smooth; /* 앵커 링크 클릭 시 부드럽게 스크롤됩니다 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 /* 전체 페이지 기본 설정 */
@@ -15,6 +16,8 @@ body {
     font-family: 'Noto Sans KR', sans-serif; /* 넥슨 대신 구글 웹폰트 사용 */
     line-height: 1.6; /* 줄간격을 1.6배로 설정합니다 */
     color: #333; /* 글자색을 진한 회색으로 설정합니다 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
+    width: 100%; /* 전체 너비 설정 */
 }
 
 /* 헤더 전체 스타일 */
@@ -369,6 +372,8 @@ body {
     .header-container {
         gap: 15px;
         padding: 0 15px;
+        max-width: 100%;
+        width: 100%;
     }
     
     /* 로고 크기를 조정합니다 */
@@ -613,6 +618,8 @@ body {
     .header-container {
         height: 70px;
         padding: 0 15px;
+        max-width: 100%;
+        width: 100%;
     }
     
     /* 로고를 더 작게 만듭니다 */
@@ -985,7 +992,7 @@ body {
     .product-grid {
         grid-template-columns: 1fr !important; /* 강제로 한 열로 설정 */
         gap: 15px !important; /* 간격을 조정 */
-        padding: 0 15px !important; /* 좌우 패딩 조정 */
+        padding: 0 10px !important; /* 좌우 패딩 조정 */
     }
     
     /* 제품 아이템을 확실히 세로 배치 */
@@ -1006,7 +1013,14 @@ body {
         padding: 15px !important; /* 패딩 조정 */
     }
     
-
+    /* 컨테이너 패딩 조정 */
+    .product-container,
+    .brand-story-container,
+    .guide-container,
+    .membership-container,
+    .footer-container {
+        padding: 0 10px !important; /* 좌우 패딩을 10px로 줄임 */
+    }
     
     /* 이용안내 아이템을 확실히 세로 배치 */
     .guide-item {
@@ -1023,6 +1037,7 @@ body {
     background-color: #f8f9fa; /* 연한 회색 배경색을 설정합니다 */
     padding: 80px 0; /* 상하 80px 패딩을 줍니다 */
     min-height: 100vh; /* 최소 높이를 화면 전체 높이로 설정합니다 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 /* 프로덕트 컨테이너 */
@@ -1030,6 +1045,8 @@ body {
     max-width: 1400px; /* 최대 너비를 1400px로 제한합니다 */
     margin: 0 auto; /* 가운데 정렬합니다 */
     padding: 0 60px; /* 좌우 패딩을 60px씩 줍니다 */
+    width: 100%; /* 전체 너비 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
 }
 
 /* 매장 이미지 영역 */
@@ -1216,6 +1233,7 @@ body {
     background: linear-gradient(135deg, #fff 0%, #f8f9fa 100%); /* 밝은 그라데이션 배경을 설정합니다 */
     padding: 100px 0; /* 상하 100px 패딩을 줍니다 */
     min-height: 80vh; /* 최소 높이를 화면의 80%로 설정합니다 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 /* 브랜드 스토리 컨테이너 */
@@ -1223,6 +1241,8 @@ body {
     max-width: 1200px; /* 최대 너비를 1200px로 제한합니다 */
     margin: 0 auto; /* 가운데 정렬합니다 */
     padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+    width: 100%; /* 전체 너비 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
 }
 
 /* 브랜드 스토리 메인 콘텐츠 */
@@ -1413,6 +1433,7 @@ body {
     background: #f8f9fa; /* 깔끔한 연한 회색 배경을 설정합니다 */
     padding: 100px 0; /* 상하 100px 패딩을 줍니다 */
     min-height: 100vh; /* 최소 높이를 화면 전체 높이로 설정합니다 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 /* 이용안내 컨테이너 */
@@ -1420,6 +1441,8 @@ body {
     max-width: 1400px; /* 최대 너비를 1400px로 제한합니다 */
     margin: 0 auto; /* 가운데 정렬합니다 */
     padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+    width: 100%; /* 전체 너비 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
 }
 
 /* 이용안내 타이틀 */
@@ -1546,6 +1569,7 @@ body {
     padding: 60px 0 30px; /* 상단 60px, 하단 30px 패딩을 설정합니다 */
     margin-top: 80px; /* 위쪽 마진을 80px 줍니다 */
     border-top: 1px solid #dee2e6; /* 상단에 구분선을 추가합니다 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 /* 푸터 컨테이너 */
@@ -1553,6 +1577,8 @@ body {
     max-width: 1200px; /* 최대 너비를 1200px로 제한합니다 */
     margin: 0 auto; /* 가운데 정렬합니다 */
     padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+    width: 100%; /* 전체 너비 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
 }
 
 /* 상단 링크 영역 */
@@ -1637,6 +1663,7 @@ body {
     background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%); /* 밝은 그라데이션 배경을 설정합니다 */
     padding: 100px 0; /* 상하 100px 패딩을 줍니다 */
     min-height: 80vh; /* 최소 높이를 화면의 80%로 설정합니다 */
+    overflow-x: hidden; /* 가로 스크롤 방지 */
 }
 
 /* 멤버십 컨테이너 */
@@ -1644,6 +1671,8 @@ body {
     max-width: 1200px; /* 최대 너비를 1200px로 제한합니다 */
     margin: 0 auto; /* 가운데 정렬합니다 */
     padding: 0 20px; /* 좌우 패딩을 20px씩 줍니다 */
+    width: 100%; /* 전체 너비 설정 */
+    box-sizing: border-box; /* 패딩과 보더를 포함한 크기 계산 */
 }
 
 /* 멤버십 타이틀 */
