@@ -741,8 +741,21 @@ body {
     }
     
     .contact-info-brand {
-        padding: 12px; /* 패딩을 줄입니다 */
-        margin: 12px 0; /* 상하 마진을 줄입니다 */
+        padding: 15px; /* 패딩을 늘립니다 */
+        margin: 15px 0; /* 상하 마진을 늘립니다 */
+    }
+    
+    .email-info {
+        gap: 8px; /* 간격을 늘립니다 */
+    }
+    
+    .email-label {
+        font-size: 1rem;
+    }
+    
+    .email-address {
+        font-size: 1rem;
+        line-height: 1.4;
     }
     
     .contact-info-brand p {
@@ -1031,6 +1044,20 @@ body {
         word-wrap: break-word !important; /* 긴 단어 줄바꿈 */
         overflow-wrap: break-word !important; /* 긴 단어 줄바꿈 (모던 브라우저) */
         text-align: center !important; /* 가운데 정렬 */
+    }
+    
+    /* 이메일 정보 스타일 */
+    .email-info {
+        gap: 6px !important; /* 간격을 줄임 */
+    }
+    
+    .email-label {
+        font-size: 0.8rem !important;
+    }
+    
+    .email-address {
+        font-size: 0.8rem !important;
+        line-height: 1.3 !important;
     }
     
     /* 이용안내 아이템을 확실히 세로 배치 */
@@ -1399,6 +1426,33 @@ body {
     border-radius: 10px; /* 모서리를 10px만큼 둥글게 만듭니다 */
     margin: 15px 0; /* 상하 마진을 15px씩 줍니다 */
     border: 1px solid #e9ecef; /* 연한 회색 테두리를 추가합니다 */
+}
+
+/* 이메일 정보 컨테이너 */
+.email-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+}
+
+/* 이메일 라벨 */
+.email-label {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 0;
+}
+
+/* 이메일 주소 */
+.email-address {
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #2c3e50;
+    margin: 0;
+    word-wrap: break-word;
+    overflow-wrap: break-word;
+    text-align: center;
 }
 
 .contact-info-brand p {
